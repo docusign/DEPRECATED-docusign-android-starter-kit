@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">DocuSign Sample App</string>
+
+    <string name="ok">OK</string>
+    <string name="webView_login_forced_session_end">A login from a different location has forced your session to end. Please try again.</string>
+    <string name="webView_page_load_error">Sorry, an error occurred while trying to load the page.</string>
+    <string name="send_btn">Send</string>
+    <string name="or">-- OR --</string>
+    <string name="sign_btn">Sign</string>
+    <string name="sign_or_send">Sign Or Send</string>
+
+    <string name="welcome">Welcome %s</string>
+    <string name="whom_to_send">Please enter the recipient email to Sign or Send the envelope</string>
+    <string name="recipient_email">Recipient Email</string>
+    <string name="enter_valid_email">Enter a valid email</string>
+    <string name="send_chooser_default">Use the default document</string>
+    <string name="send_chooser_custom">Pick my own document</string>
+    <string name="send_success_message">Envelope %1$s was created and sent to %2$s successfully.</string>
+    <string name="send_success_title">Envelope send successful!</string>
+
+    <string name="signing">Signing</string>
+    <string name="signing_completed_title">Signing Completed</string>
+    <string name="signing_failed_title">Signing Failed</string>
+    <string name="signing_failed_message">Upload to Firebase failed</string>
+    <string name="signing_completed_message">Envelope is signed successfully by %1$s. Firebase upload URI is %2$s.</string>
+    <string name="loading">Loading...</string>
+
+</resources>

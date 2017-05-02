@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "45590148133",
+    "firebase_url": "https://docusign-embedded-signing.firebaseio.com",
+    "project_id": "docusign-embedded-signing",
+    "storage_bucket": "docusign-embedded-signing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45590148133:android:90eb0cd03bd2a94c",
+        "android_client_info": {
+          "package_name": "com.docusign.sample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45590148133-m6tsp39uol1vmibhcckoe3kj500usekl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.docusign.sample",
+            "certificate_hash": "cf6857077c72a38460e75f4c9a96847aef6f0399"
+          }
+        },
+        {
+          "client_id": "45590148133-tnbru183n85h66flskp33jtgibtmfosb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJUkBo1isRVdbSZIQSYRuBwgXBx0fDA0s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45590148133-tnbru183n85h66flskp33jtgibtmfosb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

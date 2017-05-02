@@ -1,0 +1,9 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_padding">16dp</dimen>
+
+    <dimen name="sign_or_send_button_width">128dp</dimen>
+    <dimen name="sign_or_send_button_height">56dp</dimen>
+
+    <dimen name="sign_or_send_email_width">300dp</dimen>
+</resources>

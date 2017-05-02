@@ -1,0 +1,24 @@
+-classpath
+'/Users/majid.mallis/.m2/repository/com/squareup/retrofit2/converter-gson/2.1.0/converter-gson-2.1.0.jar:/Users/majid.mallis/.m2/repository/joda-time/joda-time/2.9.4/joda-time-2.9.4.jar:/Users/majid.mallis/.m2/repository/com/squareup/retrofit2/converter-scalars/2.1.0/converter-scalars-2.1.0.jar:/Users/majid.mallis/.m2/repository/io/swagger/swagger-annotations/1.5.9/swagger-annotations-1.5.9.jar:/Users/majid.mallis/.m2/repository/org/apache/oltu/oauth2/org.apache.oltu.oauth2.client/1.0.1/org.apache.oltu.oauth2.client-1.0.1.jar:/Users/majid.mallis/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/Users/majid.mallis/.m2/repository/com/squareup/okhttp3/okhttp/3.3.0/okhttp-3.3.0.jar:/Users/majid.mallis/.m2/repository/org/apache/oltu/oauth2/org.apache.oltu.oauth2.common/1.0.1/org.apache.oltu.oauth2.common-1.0.1.jar:/Users/majid.mallis/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar:/Users/majid.mallis/.m2/repository/org/json/json/20140107/json-20140107.jar:/Users/majid.mallis/.m2/repository/com/squareup/retrofit2/retrofit/2.1.0/retrofit-2.1.0.jar:/Users/majid.mallis/.m2/repository/com/squareup/okio/okio/1.8.0/okio-1.8.0.jar:/Users/majid.mallis/.m2/repository/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/Users/majid.mallis/dev/docusign-android-client/api-client/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2017. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/majid.mallis/dev/docusign-android-client/api-client/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'docusign-esign-android 0.0.1 API'
+-linkoffline
+'http://docs.oracle.com/javase/8/docs/api' '/Users/majid.mallis/dev/docusign-android-client/api-client/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'docusign-esign-android 0.0.1 API'

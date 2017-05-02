@@ -1,0 +1,11 @@
+This is a plain text document example that will be sent for signature.
+
+DocuSign supports many document types. All are first converted to PDF format before they are signed.
+
+Formats include:
+
+DOCUMENT	.as, .asl, .asp, .doc, .docm, .docx, .dot, .dotm, .dotx, .htm, .html, .pdf, .pdx, .rtf, .txt, .wpd, .wps, .wpt
+DRAWING	.dwg, .dxf, .emz, .svg, .svgz, .vdx, .vsd, .vss, .vst
+IMAGE	.bmp, .cdr, .dcx, .gif, .ico, .jpg, .jpeg, .pct, .pic, .png, .rgb, .sam, .tga, .tif, .tiff, .wpg
+PRESENTATION	.dps, .dpt, .pot, .potx, .pps, .ppt, .pptm, .pptx
+SPREADSHEET	.csv, .et, .ett, .xls, .xlsx, .xlt

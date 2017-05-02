@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_padding"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.docusign.sample.SignOrSendActivity"
+    tools:showIn="@layout/activity_signorsend">
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="60dp"
+        android:text="@string/welcome"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="@dimen/activity_padding"
+        android:text="@string/whom_to_send"
+        android:textSize="16sp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="@dimen/sign_or_send_email_width"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="@dimen/sign_or_send_email_width"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_padding"
+            android:gravity="center_horizontal"
+            android:hint="@string/recipient_email"
+            android:inputType="textEmailAddress" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/send_btn"
+        style="@style/Button"
+        android:text="@string/send_btn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_padding"
+        android:paddingTop="@dimen/activity_padding"
+        android:text="@string/or" />
+
+    <Button
+        android:id="@+id/sign_btn"
+        style="@style/Button"
+        android:text="@string/sign_btn" />
+
+</LinearLayout>

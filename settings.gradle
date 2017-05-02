@@ -1,0 +1,4 @@
+include ':api-client', ':docusign-workflows'
+include ':samples:embedded-signing'
+
+rootProject.name = 'docusign-android-client'
