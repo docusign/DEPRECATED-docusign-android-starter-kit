@@ -41,55 +41,12 @@ public class DocuSignOAuthService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
-        // see https://docs.docusign.com/esign/guide/authentication/oa2_auth_code.html
-        String code = intent.getStringExtra(EXTRA_CODE);
+        // see https://developers.docusign.com/esign/guide/authentication/oauth2-implicit
+        String token = intent.getStringExtra(EXTRA_ACCESS_TOKEN);
 
-        HttpURLConnection httpURLConnection;
-
-        try {
-            String message = Config.PARAMETER_GRANT_TYPE +
-                    "=" +
-                    Config.PARAMETER_AUTHORIZATION_CODE +
-                    "&" +
-                    Config.PARAMETER_CODE +
-                    "=" +
-                    URLEncoder.encode(code, Config.UTF8) +
-                    "&" +
-                    Config.PARAMETER_REDIRECT_URI +
-                    "=" +
-                    Config.PARAMETER_CALLBACK;
-
-            URL url = new URL(new URL(Config.OAUTH_BASE_URL), Config.FULL_OAUTH_TOKEN);
-
-            OkHttpClient okHttpClient = new OkHttpClient();
-
-            httpURLConnection = new OkUrlFactory(okHttpClient).open(url);
-            // Add request properties
-            String headerCode = Base64.encodeToString((Config.CLIENT_ID + ":" + Config.CLIENT_SECRET).getBytes(), Base64.URL_SAFE | Base64.NO_WRAP);
-            httpURLConnection.addRequestProperty(Config.AUTHORIZATION, Config.BASIC + " " + headerCode.trim());
-            httpURLConnection.addRequestProperty(Config.CONTENT_TYPE, Config.APPLICATION_X_FORM_URLENCODED);
-
-            httpURLConnection.setRequestMethod(Config.HTTP_POST);
-
-            httpURLConnection.setChunkedStreamingMode(0);
-            httpURLConnection.setDoOutput(true);
-
-            OutputStream os = httpURLConnection.getOutputStream();
-            os.write(message.getBytes(Config.UTF8.toUpperCase()));
-            os.close();
-
-            AccessTokenModel accessToken = processJson(httpURLConnection.getInputStream(), AccessTokenModel.class);
-            String token = accessToken.access_token;
-            String error = accessToken.error;
-
-            Intent tokenIntent = new Intent(ACTION_ACCESS_TOKEN);
-            tokenIntent.putExtra(EXTRA_ACCESS_TOKEN, token);
-            tokenIntent.putExtra(EXTRA_ACCESS_TOKEN_ERROR, error);
-            LocalBroadcastManager.getInstance(this).sendBroadcast(tokenIntent);
-
-        } catch (Exception e) {
-            Log.d(TAG, e.getMessage());
-        }
+        Intent tokenIntent = new Intent(ACTION_ACCESS_TOKEN);
+        tokenIntent.putExtra(EXTRA_ACCESS_TOKEN, token);
+        LocalBroadcastManager.getInstance(this).sendBroadcast(tokenIntent);
 
     }
 
@@ -98,9 +55,9 @@ public class DocuSignOAuthService extends IntentService {
                 .buildUpon()
                 .path(Config.FULL_OAUTH_AUTH)
                 .appendQueryParameter(Config.PARAMETER_CLIENT_ID, Config.CLIENT_ID)
-                .appendQueryParameter(Config.PARAMETER_RESPONSE_TYPE, Config.PARAMETER_CODE)
+                .appendQueryParameter(Config.PARAMETER_RESPONSE_TYPE, Config.PARAMETER_TOKEN)
                 .appendQueryParameter(Config.PARAMETER_REDIRECT_URI, Config.PARAMETER_CALLBACK)
-                .appendQueryParameter(Config.PARAMETER_SCOPE, Config.PARAMETER_ALL);
+                .appendQueryParameter(Config.PARAMETER_SCOPE, Config.PARAMETER_SIGNATURE);
 
         Uri oauthUri = oauthBuilder.build();
         return oauthUri.toString();

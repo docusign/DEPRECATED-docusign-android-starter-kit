@@ -97,7 +97,7 @@ public class FirebaseDownloadService extends FirebaseTaskService {
                     @Override
                     public void doInBackground(StreamDownloadTask.TaskSnapshot taskSnapshot,
                                                InputStream inputStream) throws IOException {
-                        long totalBytes = taskSnapshot.getTotalByteCount();
+                        //long totalBytes = taskSnapshot.getTotalByteCount();
                         long bytesDownloaded = 0;
 
                         byte[] buffer = new byte[1024];
