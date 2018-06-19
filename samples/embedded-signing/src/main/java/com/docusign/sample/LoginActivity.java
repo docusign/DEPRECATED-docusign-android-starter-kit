@@ -148,14 +148,14 @@ public class LoginActivity extends AppCompatActivity {
                 String[] pieces = part.split("=");
                 values.put(pieces[0], pieces.length == 1 ? "" : pieces[1]);
             }
-            String code = values.get(Config.PARAMETER_CODE);
+            String token = values.get(Config.PARAMETER_ACCESS_TOKEN);
             String error = values.get(Config.PARAMETER_ERROR);
             String errorDescription = values.get(Config.PARAMETER_ERROR_DETAILS);
 
             if (error != null) {
                 handleError(error, errorDescription);
-            } else if (code != null) {
-                handleCode(code);
+            } else if (token != null) {
+                handleToken(token);
             } else {
                 handleError("AccessToken Error", "Network Error");
             }
@@ -181,6 +181,13 @@ public class LoginActivity extends AppCompatActivity {
         // Call AccessToken API
         Intent intent = new Intent(this, DocuSignOAuthService.class);
         intent.putExtra(DocuSignOAuthService.EXTRA_CODE, authCode);
+        startService(intent);
+    }
+
+    private void handleToken(String authToken) {
+        // Call AccessToken API
+        Intent intent = new Intent(this, DocuSignOAuthService.class);
+        intent.putExtra(DocuSignOAuthService.EXTRA_ACCESS_TOKEN, authToken);
         startService(intent);
     }
 
